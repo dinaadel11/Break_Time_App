@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../core/utils/custom_button.dart';
 
@@ -23,7 +24,12 @@ class SplashViewBody extends StatelessWidget {
         const SizedBox(
           height: 200,
         ),
-        CustomButton(),
+        CustomButton(
+          textbutton: 'Get Statred',
+          onTap: () {
+            GoRouter.of(context).push('/SettingView');
+          },
+        ),
       ],
     );
   }

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
-
+  CustomButton({super.key, this.onTap, required this.textbutton});
+  final Function()? onTap;
+  final String textbutton;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
@@ -16,10 +17,10 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             color: const Color(0xff3d73df),
           ),
-          child: const Center(
+          child: Center(
             child: Text(
-              'Get Statred',
-              style: TextStyle(
+              textbutton,
+              style: const TextStyle(
                   color: Colors.white,
                   fontSize: 24,
                   fontWeight: FontWeight.bold),
