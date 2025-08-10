@@ -6,7 +6,7 @@ import 'package:newsapp/core/utils/app_router.dart';
 void main() => runApp(
       DevicePreview(
         enabled: !kReleaseMode,
-        builder: (context) => BreakTimeApp(), // Wrap your app
+        builder: (context) => const BreakTimeApp(), // Wrap your app
       ),
     );
 

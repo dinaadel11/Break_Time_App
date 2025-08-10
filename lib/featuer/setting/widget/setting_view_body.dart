@@ -9,7 +9,7 @@ class SettingViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 100, left: 8),
+      padding: const EdgeInsets.only(top: 100, left: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
