@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:newsapp/featuer/break/break_view.dart';
 import 'package:newsapp/featuer/home/home_view.dart';
 import 'package:newsapp/featuer/setting/setting_view.dart';
 import 'package:newsapp/featuer/splash/splash_view.dart';
@@ -16,6 +17,10 @@ abstract class AppRouter {
     GoRoute(
       path: '/HomeView',
       builder: (context, state) => const HomeView(),
+    ),
+    GoRoute(
+      path: '/BreakView',
+      builder: (context, state) => const BreakView(),
     ),
   ]);
 }

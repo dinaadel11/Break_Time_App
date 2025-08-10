@@ -43,7 +43,12 @@ class HomeViewBody extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          CustomButton(textbutton: 'Start'),
+          CustomButton(
+            textbutton: 'Start',
+            onTap: () {
+              GoRouter.of(context).push('/BreakView');
+            },
+          ),
           const SizedBox(
             height: 20,
           ),
