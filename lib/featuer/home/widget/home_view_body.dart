@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:newsapp/core/utils/custom_button.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -7,13 +8,13 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 25, left: 8, right: 8, bottom: 8),
+      padding: const EdgeInsets.only(top: 32, left: 8, right: 8, bottom: 10),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            'Schedule is ON',
+            'Schedule is Off',
             style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
           ),
           Center(
@@ -46,7 +47,12 @@ class HomeViewBody extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          CustomButton(textbutton: 'Edit'),
+          CustomButton(
+            textbutton: 'Edit',
+            onTap: () {
+              GoRouter.of(context).pop();
+            },
+          ),
         ],
       ),
     );
