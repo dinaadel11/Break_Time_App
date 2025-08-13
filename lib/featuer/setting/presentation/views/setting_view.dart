@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/featuer/setting/widget/setting_view_body.dart';
+import 'package:newsapp/featuer/setting/presentation/views/widget/setting_view_body.dart';
 
 class SettingView extends StatelessWidget {
   const SettingView({super.key});
