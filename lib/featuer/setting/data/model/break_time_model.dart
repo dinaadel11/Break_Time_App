@@ -15,4 +15,8 @@ class BreakTimeModel extends HiveObject {
       {required this.breakLenght,
       required this.frequancy,
       required this.nameButton});
+  @override
+  String toString() {
+    return 'BreakTimeModel(breakLenght: $breakLenght, frequancy: $frequancy, nameButton: $nameButton)';
+  }
 }

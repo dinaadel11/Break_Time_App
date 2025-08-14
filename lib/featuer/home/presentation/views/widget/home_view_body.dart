@@ -13,9 +13,19 @@ class HomeViewBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            'Schedule is Off',
-            style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'My Schedule ',
+                style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+              ),
+              Icon(
+                Icons.hourglass_full_outlined,
+                size: 32,
+                color: Color.fromARGB(255, 0, 207, 69),
+              ),
+            ],
           ),
           Center(
             child: Image.asset('assets/images/work (1).png'),
