@@ -18,15 +18,4 @@ class SaverdatacubitCubit extends Cubit<SaverdatacubitState> {
       emit(SaverdatacubitFailuer(errMessage: e.toString()));
     }
   }
-
-  Future<void> backupData() async {
-    emit(SaverdatacubitLoading());
-    try {
-      final box = Hive.box<BreakTimeModel>(breakbox);
-      await box.get("setting");
-      emit(SaverdatacubitSuccess());
-    } on Exception catch (e) {
-      emit(SaverdatacubitFailuer(errMessage: e.toString()));
-    }
-  }
 }

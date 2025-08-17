@@ -12,7 +12,13 @@ class SplashViewBody extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        const SizedBox(
+          height: 60,
+        ),
         Center(child: Image.asset('assets/images/breaktime.png')),
+        const SizedBox(
+          height: 60,
+        ),
         const Text(
           'Welcome to',
           style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),

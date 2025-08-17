@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hive/hive.dart';
+import 'package:newsapp/constant.dart';
 import 'package:newsapp/core/utils/custom_button.dart';
 import 'package:newsapp/featuer/setting/data/model/break_time_model.dart';
 import 'package:newsapp/featuer/setting/presentation/manager/saver_data_cubit/saverdatacubit_cubit.dart';
@@ -85,17 +86,13 @@ class _SettingViewBodyState extends State<SettingViewBody> {
                 onTap: () {
                   if (formkey.currentState!.validate()) {
                     formkey.currentState!.save();
+                    var box = Hive.box<BreakTimeModel>(breakbox);
                     var breakmodel = BreakTimeModel(
                         breakLenght: breakLength!,
-                        frequancy: frequancy ?? 0,
+                        frequancy: frequancy!,
                         nameButton: "start");
                     BlocProvider.of<SaverdatacubitCubit>(context)
                         .saverData(breakmodel);
-
-                    Future.delayed(Duration(milliseconds: 300), () {
-                      var box = Hive.box<BreakTimeModel>('breaktimebox');
-                      print(box.values.toList());
-                    });
                     GoRouter.of(context).push('/HomeView');
                   } else {
                     autovalidateMode = AutovalidateMode.always;

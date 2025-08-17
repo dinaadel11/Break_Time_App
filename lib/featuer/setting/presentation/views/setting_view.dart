@@ -5,12 +5,13 @@ import 'package:newsapp/featuer/setting/presentation/views/widget/setting_view_b
 
 class SettingView extends StatelessWidget {
   const SettingView({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocProvider(
-        create: (context) => SaverdatacubitCubit(),
+      body: MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (_) => SaverdatacubitCubit()),
+        ],
         child: SettingViewBody(),
       ),
     );

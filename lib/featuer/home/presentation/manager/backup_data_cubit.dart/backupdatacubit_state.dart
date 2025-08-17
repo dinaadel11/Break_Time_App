@@ -8,7 +8,7 @@ class BackupdatacubitInitial extends BackupdatacubitState {}
 class BackupdatacubitLoading extends BackupdatacubitState {}
 
 class BackupdatacubitSuccess extends BackupdatacubitState {
-  List<BreakTimeModel> data;
+  final BreakTimeModel data;
   BackupdatacubitSuccess({required this.data});
 }
 

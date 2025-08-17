@@ -4,8 +4,12 @@ import 'package:flutter/services.dart';
 import 'package:newsapp/constant.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({super.key, this.onsaved});
+  CustomTextField({
+    super.key,
+    this.onsaved,
+  });
   final void Function(String?)? onsaved;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
